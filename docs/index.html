@@ -13,7 +13,6 @@
             color-scheme: dark;
         }
 
-        /* Base layout – dark GitHub-like */
         body {
             background-color: #0d1117;
             color: #c9d1d9;
@@ -26,10 +25,10 @@
         }
 
         main.container {
-            max-width: 720px;
+            max-width: 760px;
             margin: 3.5rem auto 2rem auto;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.65;
         }
 
         h1,
@@ -40,13 +39,13 @@
         }
 
         .title {
-            font-size: 4.5rem;
+            font-size: 5.5rem;
             font-weight: 800;
             color: #58a6ff;
             text-align: center;
             margin-top: 0.5rem;
             margin-bottom: 1.75rem;
-            line-height: 1.1;
+            line-height: 1.05;
         }
 
         .subtitle {
@@ -57,35 +56,28 @@
             font-weight: 500;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
         }
 
         h2 {
-            margin-top: 3rem;
-            margin-bottom: 0;
-            font-size: 2rem;
+            margin-top: 4.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 2.2rem;
             font-weight: 600;
             color: #8b949e;
             line-height: 2.2rem;
         }
 
         h3 {
-            margin-bottom: 0.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.35rem;
             font-size: 1.2rem;
+            text-align: left;
+            color: #ffffff;
         }
 
         p {
-            margin: 0.5rem 0 1.5rem 0;
-            /* Adjusted for better paragraph spacing */
-        }
-
-        ul {
-            margin: 0.5rem 0 1.25rem 1.2rem;
-            padding: 0;
-        }
-
-        li {
-            margin: 0.3rem 0;
+            margin: 0.5rem 0 1.35rem 0;
         }
 
         a {
@@ -105,28 +97,106 @@
         }
 
         blockquote {
-            margin: 0.75em 0;
-            margin-top: 2em;
-            margin-bottom: 2em;
+            margin: 0.75em 0 2em 0;
             padding: 0 1em;
             color: inherit;
             border-left: 0.25em solid #3d444d;
-            /* neutral gray for dark mode too */
         }
 
         .note {
             margin-top: 0.75rem;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: #8b949e;
         }
 
+        .section-intro {
+            text-align: center;
+            color: #c9d1d9;
+            max-width: 680px;
+            margin: 0 auto 1.6rem auto;
+            font-style: italic;
+        }
+
+        .faq {
+            margin-top: 1.75rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            border-top: 1px solid #30363d;
+        }
+
+        .cta-row {
+            margin: 1rem auto 1rem auto;
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .cta-tagline {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #8b949e;
+            margin-top: 0.4rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            text-decoration: none;
+            border: 1px solid #30363d;
+            background-color: #161b22;
+            color: #c9d1d9;
+            transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+        }
+
+        .button:hover {
+            background-color: #1f6feb;
+            border-color: #1f6feb;
+            color: #ffffff;
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .button.primary {
+            background-color: #238636;
+            border-color: #238636;
+            color: #ffffff;
+        }
+
+        .button.primary:hover {
+            background-color: #2ea043;
+            border-color: #2ea043;
+        }
+
+        .button.secondary {
+            background-color: #161b22;
+            border-color: #30363d;
+        }
+
         footer {
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
             padding-bottom: 0.5rem;
             border-top: 1px solid #30363d;
             font-size: 0.85rem;
-            opacity: 0.7;
+            opacity: 0.75;
             text-align: center;
         }
 
@@ -153,57 +223,14 @@
             color: #ffffff;
             background-color: #555;
             border-color: #777;
-        }
-
-        /* CTA */
-        .cta-row {
-            margin: 1rem auto 1rem auto;
-            margin-bottom: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            justify-content: center;
-        }
-
-        .cta-tagline {
-            font-size: 0.8rem;
-            text-align: center;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.98rem;
             text-decoration: none;
-            border: 1px solid #30363d;
-            background-color: #161b22;
-            color: #c9d1d9;
-            transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
         }
 
-        .button:hover {
-            background-color: #1f6feb;
-            border-color: #1f6feb;
+        .closing-line {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 1rem;
             color: #ffffff;
-            transform: translateY(-1px);
-        }
-
-        .button.primary {
-            background-color: #238636;
-            border-color: #238636;
-            color: #ffffff;
-        }
-
-        .button.primary:hover {
-            background-color: #2ea043;
-            border-color: #2ea043;
-        }
-
-        .button.secondary {
-            background-color: #161b22;
-            border-color: #30363d;
         }
     </style>
 </head>
@@ -214,52 +241,165 @@
         <p class="subtitle">From Civilization 1.0 to Civilization 2.0</p>
 
         <blockquote>
-            <b>TL;DR - We can retire Civilization 1.0 and build Civilization 2.0 — a world where everyone has a home,
-                work is
-                light, health and learning are guaranteed, and no one is disposable. There is no “them.” It has always
-                been <i>us and us</i>.</b>
+            <b>TL;DR — We can retire Civilization 1.0 and build Civilization 2.0: a world where everyone has a home,
+                work is light, health and learning are guaranteed, nature is adored, and no one is disposable. Peace is
+                not enough. Humanity needs a civilization that is actually worth living inside.</b>
         </blockquote>
 
-        <p>For about 10,000 years we’ve been running on <b>Civilization 1.0</b>—the era that began when we learned how
-            to grow crops in one place, built permanent homes, and created surplus. Out of that came property,
-            hierarchy, and the habit of turning other humans into “them.” The result is not proof that people are
-            broken; it is proof that our first civilization operating system was built without understanding what it
-            does to bodies, bonds, and minds.</p>
+        <p>For about 10,000 years we’ve been running on <b>Civilization 1.0</b> — the era that began when we learned
+            how to grow crops in one place, built permanent settlements, created surplus, and from there built property,
+            hierarchy, and systems that turned some humans into “us” and others into “them.”</p>
 
-        <p>You can feel the side effects: <b>inflammation of humanity</b>. Nervous systems running hot. Lives organized
-            around quiet
-            fear, status, and avoidance. We treat symptoms person by person and almost never name the real pattern: the
-            way we live
-            together is inflaming all of us.</p>
+        <p>The result is not proof that people are broken. It is proof that our first civilization operating system was
+            built without understanding what chronic fear, hidden harm, domination, and disposability do to bodies,
+            bonds, minds, and public life. You can feel the side effects everywhere: inflammation of humanity.
+            Nervous systems running hot. Lives built around quiet fear, status, distrust, isolation, performance,
+            and avoidance.</p>
 
-        <p><b>Civilization 2.0</b> starts from a simpler truth: we did not make ourselves; we are all built of the same
-            stuff; we need the same core things—safety, honesty, respect, repair. There is no real “them.” Every war is
-            <b>us and us</b>. We are not going to escape our issues by going to another planet or into an afterlife;
-            everyone we are trying not to face will still be there, or alive in our own minds. Wherever we go, it will
-            be the same people until we change how we are with each other.</p>
+        <p>We manage symptoms one person at a time and almost never name the larger pattern: <b>the way we live
+                together is inflaming all of us.</b></p>
 
-        <p>No one chose to be born inside Civilization 1.0—but we are responsible for what we do now. The shift to Civ
-            2.0 will hurt: we will have to surface buried grief, shame, and harm instead of exporting it to someone
-            weaker. We cannot skip that suffering; the only thing we can choose is to make it honest, shared, and
-            non-punitive.</p>
+        <p><b>Civilization 2.0</b> starts from a simpler truth: no one made themselves, we are all built of the same
+            stuff, and we all require the same core conditions to flourish — safety, honesty, respect, repair, food,
+            shelter, care, learning, beauty, and real belonging. There is no real “them.” Every war is <b>us and
+                us</b>. Every neglected child is <b>us and us</b>. Every person thrown away for being poor, ill,
+            traumatized, late, or inconvenient is <b>us and us</b>.</p>
 
-        <p>To <i>Make It Amazing</i> is to retire Civ 1.0 and deliberately build Civ 2.0: a world where everyone has a
-            real home; work is light and meaningful; health and learning are shared infrastructure; nature is adored;
-            creation is the norm; our beauty is evident in every action we take, individually and collectively; and no
-            one is thrown away for being poor, traumatized, or late to the process.</p>
+        <p>We are not going to escape our issues by changing slogans, reshuffling power, fleeing into fantasy, moving to
+            another planet, or waiting for an afterlife to fix what we refuse to face here. Wherever we go, it will be
+            the same humans, the same unfinished grief, the same hidden distortions, and the same consequences — unless
+            we change how we live with each other.</p>
 
-        <h2>Ready to help <i>Make It Amazing</i>?</h2>
-        <div class="cta-row">
-            <a href="https://worldamazing.org/show/" target="_blank" class="button primary">
-                Attend: World Amazing Show
-            </a>
-            <a href="https://worldamazing.org/" target="_blank" class="button secondary">
-                See the Plan
-            </a>
-            <br/>
-            <i class="cta-tagline">
-                <a href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank">Sign-up</a> to attend
-                show w/ Thinking, Discussion, Singing, Moving, and a Pizza Party Dance afterwards.</i>
+        <p>No one chose to be born inside Civilization 1.0. But we are responsible for what we do now. The shift to
+            Civilization 2.0 will not come from pretending everything is fine. It will require truth, repair, and the
+            courage to stop exporting suffering downward onto weaker people. It will require building systems that
+            protect life instead of grinding it down.</p>
+
+        <h2>What does it mean to Make It Amazing?</h2>
+        <p class="section-intro">It means building a civilization that does more than merely survive.</p>
+
+        <p>To <i>Make It Amazing</i> is to deliberately build a world where everyone has a real home; where health and
+            learning are shared infrastructure; where children are safe; where work is lighter, meaningful, and no
+            longer consumes life; where food, beauty, movement, music, nature, and public life are part of the normal
+            human experience; where truth matters; where repair is expected; and where no one is discarded.</p>
+
+        <p>“Amazing” does not mean luxury for a few. It means that the baseline of civilization becomes
+            worthy of human beings.</p>
+
+        <p>“Peace” is not enough if people are still lonely, overworked, chronically stressed, isolated, numbed,
+            ashamed, manipulated, medically abandoned, economically trapped, or forced to live in ugly and
+            degrading conditions. A civilization is not finished when conflict is merely reduced. It is finished when
+            life becomes beautiful, cooperative, healing, and generative as a normal condition.</p>
+
+        <h2>Why this is realistic</h2>
+        <p class="section-intro">Because the unrealistic thing is continuing to burn human life in order to preserve a
+            broken normal.</p>
+
+        <p>Humanity already has the knowledge, infrastructure, labor power, technology, productive capacity, and land
+            to guarantee the basics far more widely than it does now. We already know how to build homes, grow food,
+            educate children, provide healthcare, organize transportation, and coordinate at scale. The problem is not
+            that a better world is impossible. The problem is that our current systems are still organized around old
+            assumptions: scarcity logic, hierarchy, competition, image maintenance, and the idea that some people are
+            allowed to be sacrificed so that others can feel secure.</p>
+
+        <p>That is why “amazing” is not fantasy language. It is the only coherent destination. A civilization that can
+            prevent homelessness but does not, reduce overwork but does not, protect children but does not, and
+            organize beauty and abundance but does not, is not realistic. It is unfinished.</p>
+
+        <h2>What is happening now</h2>
+        <p class="section-intro">This is not just an idea for later. It is already being made legible in public.</p>
+
+        <p><b>World Amazing</b> is the broader plan and framework: a realistic map for how humanity can move out of
+            Civilization 1.0 and into a better civilizational baseline.</p>
+
+        <p><b>The World Amazing Show</b> is one live public entry point into that process: discussion, thinking,
+            movement, singing, gathering, and direct participation in imagining and building what comes next.</p>
+
+        <p>This site exists as an onramp to the whole thing — the plan, the public conversation, and the early movement
+            of people who recognize that life is what we make it, and that “amazing” is not excessive. It is overdue.
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h3>Who is this for?</h3>
+                <p>Everyone. This is not for a niche, a class, a nation, or a subculture. It is an invitation to humanity.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this politics?</h3>
+                <p>Not in the narrow party sense. This concerns how humans live together at civilizational scale:
+                    housing, work, care, truth, public life, childhood, repair, and the design of everyday existence.
+                    It is broader than conventional politics because it reaches beneath policy into the operating system
+                    itself.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this realistic, or just utopian?</h3>
+                <p>It is realistic precisely because the current arrangement is failing at enormous human cost while
+                    still possessing the means to do far better. The fantasy is believing that endless stress, rent
+                    extraction, loneliness, disposability, degraded public life, and preventable suffering are somehow
+                    the natural endpoint of human civilization.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why use the word “amazing”?</h3>
+                <p>Because “less bad” is not a final standard. Humanity should not aim for a barely tolerable
+                    civilization. It should aim for a world that is beautiful, sane, cooperative, healing, and worth
+                    being born into. “Amazing” names the fact that the proper baseline for civilization should feel
+                    worthy of life, not merely survivable.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is World Amazing?</h3>
+                <p>World Amazing is the broader plan and framework for building a better civilization — one where the
+                    basics are guaranteed, work is lighter, truth matters, people are not thrown away, and public life
+                    becomes something worth participating in.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is the World Amazing Show?</h3>
+                <p>The show is a live public entry point into all of this. Depending on the gathering, it may include
+                    discussion, walking, thinking, movement, singing, dancing, and shared public experience. It is not
+                    separate from the plan; it is one way the plan becomes real in public.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What changes first?</h3>
+                <p>First comes clarity: naming what is broken and what is possible. Then come public conversation, live
+                    gatherings, visible prototypes, and practical steps that begin reorganizing life around homes, care,
+                    truth, cooperation, and human flourishing. Civilization 2.0 is not built in one gesture. It is
+                    built by making the next normal visible and real.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need to agree with everything to participate?</h3>
+                <p>No. The invitation is not to perform ideological loyalty. The invitation is to think seriously,
+                    engage honestly, and help move humanity toward a world that is less distorted, less cruel, less
+                    wasteful, and far more alive.</p>
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to help <i>Make It Amazing</i>?</h2>
+
+            <div class="cta-row">
+                <a href="https://worldamazing.org/" target="_blank" class="button secondary">
+                    See the Plan
+                </a>
+                <a href="https://worldamazing.org/show/" target="_blank" class="button primary">
+                    Learn About the Show
+                </a>
+            </div>
+
+            <p class="cta-tagline">
+                The plan explains the larger civilizational shift. The show is one live way to step into it.
+            </p>
+
+            <p class="closing-line">
+                <strong>Life is what we make it. Why aim for anything less than amazing?</strong>
+            </p>
         </div>
 
         <footer>
@@ -267,6 +407,7 @@
                 Part of the <a href="https://worldamazing.org/" target="_blank">World Amazing</a> ecosystem.
             </p>
         </footer>
+        
     </main>
 </body>
 
