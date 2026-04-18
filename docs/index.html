@@ -97,16 +97,12 @@
         }
 
         blockquote {
-            margin: 0.75em 0 2em 0;
-            padding: 0 1em;
-            color: inherit;
-            border-left: 0.25em solid #3d444d;
-        }
-
-        .note {
-            margin-top: 0.75rem;
-            font-size: 0.92rem;
-            color: #8b949e;
+            margin: 1.5rem 0 2.5rem 0;
+            padding: 1.25rem 1.5rem;
+            color: #ffffff;
+            background: linear-gradient(90deg, rgba(88, 166, 255, 0.08) 0%, transparent 100%);
+            border-left: 3px solid #58a6ff;
+            border-radius: 0 8px 8px 0;
         }
 
         .section-intro {
@@ -132,11 +128,6 @@
             padding-bottom: 0;
         }
 
-        .cta-section {
-            margin-top: 3rem;
-            border-top: 1px solid #30363d;
-        }
-
         .cta-row {
             margin: 1rem auto 1rem auto;
             margin-bottom: 1.25rem;
@@ -144,13 +135,6 @@
             flex-wrap: wrap;
             gap: 0.75rem;
             justify-content: center;
-        }
-
-        .cta-tagline {
-            font-size: 0.9rem;
-            text-align: center;
-            color: #8b949e;
-            margin-top: 0.4rem;
         }
 
         .button {
@@ -190,21 +174,14 @@
             border-color: #30363d;
         }
 
-        footer {
-            margin-top: 1rem;
-            padding-top: 0.75rem;
-            padding-bottom: 0.5rem;
-            border-top: 1px solid #30363d;
-            font-size: 0.85rem;
-            opacity: 0.75;
+        .closing-line {
+            margin-top: 1.5rem;
             text-align: center;
+            font-size: 1rem;
+            color: #ffffff;
         }
 
-        footer p {
-            margin: 0.4rem 0;
-            line-height: 1.5;
-        }
-
+        /* begin language-switch */
         .language-switch {
             margin-top: 0.6rem;
         }
@@ -225,13 +202,161 @@
             border-color: #777;
             text-decoration: none;
         }
+        /* end language-switch */
 
-        .closing-line {
-            margin-top: 1.5rem;
+        /* begin vision-block */
+        .vision-block {
+            margin: 2.4rem 0 3rem 0;
+            padding: 1.6rem 1.4rem;
+            border: 1px solid #26303a;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #0f141b 0%, #111821 100%);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.015) inset;
+        }
+
+        .vision-block.vision-yes {
+            border-color: #1f3d2d;
+        }
+
+        .vision-block.vision-no {
+            border-color: #3a2626;
+        }
+
+        .vision-block.vision-human {
+            border-color: #2d3f5f;
+        }
+
+        .vision-block h3 {
             text-align: center;
-            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            letter-spacing: 0.01em;
             color: #ffffff;
         }
+
+        .vision-list {
+            text-align: center;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        .vision-intro {
+            margin: 2rem auto 1.2rem auto;
+            max-width: 38rem;
+            text-align: center;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+        /* end vision-block */
+
+        /* begin cta */
+        .begin-section {
+            margin-top: 3.5rem;
+        }
+
+        .begin-panel {
+            margin-top: 1.6rem;
+            padding: 2rem 1.5rem 2.1rem 1.5rem;
+            border: 1px solid #26303a;
+            border-radius: 16px;
+            background:
+                radial-gradient(circle at top center, rgba(88,166,255,0.10), transparent 38%),
+                linear-gradient(180deg, #111821 0%, #0f141b 100%);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.02) inset,
+                0 18px 40px rgba(0,0,0,0.22);
+            text-align: center;
+        }
+
+        .begin-panel p {
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .begin-kicker {
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #8b949e;
+        }
+
+        .begin-line {
+            margin-top: 1.2rem;
+            margin-bottom: 1.8rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .cta-row.cta-row-large {
+            margin-top: 1.75rem;
+            gap: 1rem;
+        }
+
+        .button.large {
+            min-width: 240px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .begin-note {
+            margin-top: 1.25rem;
+            font-size: 0.92rem;
+            color: #8b949e;
+            text-align: center;
+        }
+        /* end cta */
+
+        /* begin footer */
+        footer {
+            margin-top: 2rem;
+            padding-top: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-top: 1px solid #30363d;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        footer p {
+            margin: 0.35rem 0;
+            line-height: 1.5;
+        }
+
+        .footer-label {
+            margin-top: 1rem;
+            margin-bottom: 0.45rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #8b949e;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55rem 0.9rem;
+            margin-top: 0.35rem;
+            font-size: 0.84rem;
+            color: #8b949e;
+        }
+
+        .footer-nav a {
+            color: #8b949e;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        /* end footer */
     </style>
 </head>
 
@@ -242,19 +367,19 @@
 
         <blockquote>
             <b>TL;DR — We can retire Civilization 1.0 and build Civilization 2.0: a world where everyone has a home,
-                work is light, health and learning are guaranteed, nature is adored, and no one is disposable. Peace is
+                work is light, health and learning are guaranteed, life is adored, and no one is disposable. Peace is
                 not enough. Humanity needs a civilization that is actually worth living inside.</b>
         </blockquote>
 
-        <p>For about 10,000 years we’ve been running on <b>Civilization 1.0</b> — the era that began when we learned
+        <p>For over 10,000 years we’ve been running on <b>Civilization 1.0</b> — the era that began when we learned
             how to grow crops in one place, built permanent settlements, created surplus, and from there built property,
             hierarchy, and systems that turned some humans into “us” and others into “them.”</p>
 
-        <p>The result is not proof that people are broken. It is proof that our first civilization operating system was
-            built without understanding what chronic fear, hidden harm, domination, and disposability do to bodies,
-            bonds, minds, and public life. You can feel the side effects everywhere: inflammation of humanity.
-            Nervous systems running hot. Lives built around quiet fear, status, distrust, isolation, performance,
-            and avoidance.</p>
+        <p>The result is not proof that people are broken. We are not inherently flawed or doomed. We are simply running on a
+            legacy operating system built on scarcity logic, and the hardware is overheating. Civilization 1.0 was built without
+            understanding what chronic fear, hidden harm, domination, and disposability do to bodies, bonds, minds, and public
+            life. You can feel the side effects everywhere: inflammation of humanity. Nervous systems running hot. Lives built
+            around quiet fear, status, distrust, isolation, performance, and avoidance.</p>
 
         <p>We manage symptoms one person at a time and almost never name the larger pattern: <b>the way we live
                 together is inflaming all of us.</b></p>
@@ -263,7 +388,8 @@
             stuff, and we all require the same core conditions to flourish — safety, honesty, respect, repair, food,
             shelter, care, learning, beauty, and real belonging. There is no real “them.” Every war is <b>us and
                 us</b>. Every neglected child is <b>us and us</b>. Every person thrown away for being poor, ill,
-            traumatized, late, or inconvenient is <b>us and us</b>.</p>
+            traumatized, late, or inconvenient is <b>us and us</b>. When a system throws away its own people, it is not
+            preserving order; it is actively engaged in civilizational self-harm.</p>
 
         <p>We are not going to escape our issues by changing slogans, reshuffling power, fleeing into fantasy, moving to
             another planet, or waiting for an afterlife to fix what we refuse to face here. Wherever we go, it will be
@@ -274,6 +400,8 @@
             Civilization 2.0 will not come from pretending everything is fine. It will require truth, repair, and the
             courage to stop exporting suffering downward onto weaker people. It will require building systems that
             protect life instead of grinding it down.</p>
+
+
 
         <h2>What does it mean to <i>Make It Amazing</i>?</h2>
         <p class="section-intro">It means building a civilization that does more than merely survive.</p>
@@ -291,9 +419,92 @@
             degrading conditions. A civilization is not finished when conflict is merely reduced. It is finished when
             life becomes beautiful, cooperative, healing, and generative as a normal condition.</p>
 
+        <p class="vision-intro">
+            <strong>That kind of civilization is not abstract.</strong> If we mean it seriously, it starts to look like this:
+        </p>
+
+        <div class="vision-block vision-yes">
+            <h3><i>A world where everyone</i></h3>
+            <p class="vision-list">
+                ✅ owns a beautiful home<br />
+                ✅ grows, nurtures, and excels<br />
+                ✅ learns anything they desire<br />
+                ✅ works in any fields they desire<br />
+                ✅ lives in incredible neighborhoods<br />
+                ✅ works far less and lives far more<br />
+                ✅ has <b>lifelong healthcare</b> guaranteed<br />
+                ✅ has <b>lifelong education</b> guaranteed<br />
+                ✅ has <b>essential utilities</b> guaranteed<br />
+                ✅ has <b>essential groceries</b> guaranteed<br />
+                ✅ has <b>essential goods</b> guaranteed<br />
+                ✅ has <b>essential services</b> guaranteed<br />
+                ✅ has access to recreational activities<br />
+                ✅ has access to cultural activities<br />
+                ✅ has access to beautiful nature<br />
+                ✅ has an amazing standard of living
+            </p>
+        </div>
+
+        <div class="vision-block vision-no">
+            <h3><i>A world without</i></h3>
+            <p class="vision-list">
+                🚫 people dying prematurely<br />
+                🚫 people dying tragically<br />
+                🚫 kids getting slaughtered<br />
+                🚫 adults getting slaughtered<br />
+                🚫 babies buried under rubble<br />
+                🚫 deadly school shootings<br />
+                🚫 any type of shooting<br />
+                🚫 nations waging war on neighbors<br />
+                🚫 neighbors waging war on neighbors<br />
+                🚫 homes being destroyed<br />
+                🚫 neighborhoods getting leveled<br />
+                🚫 forced migration and displacement<br />
+                🚫 people living on the streets<br />
+                🚫 unequal access to care<br />
+                🚫 food and water scarcity<br />
+                🚫 environmental destruction<br />
+                🚫 planes falling from the sky<br />
+                🚫 helicopter horrors<br />
+                🚫 tech access divides<br />
+                🚫 economic barriers<br />
+                🚫 political oppression<br />
+                🚫 corruption and injustice<br />
+                🚫 people committing crimes<br />
+                🚫 people committing suicide<br />
+                🚫 need to put people in prison<br />
+                🚫 mental health crises<br />
+                🚫 cultural erasure<br />
+                🚫 adult exploitation<br />
+                🚫 child exploitation<br />
+                🚫 social isolation<br />
+                🚫 discrimination<br />
+                🚫 persecution<br />
+                🚫 suffering<br />
+                🚫 violence<br />
+                🚫 worry
+            </p>
+        </div>
+
+        <div class="vision-block vision-human">
+            <h3><i>A world where everyone is</i></h3>
+            <p class="vision-list">
+                🔥 essential<br />
+                🔥 nurtured<br />
+                🔥 valued<br />
+                🔥 safe<br />
+                🔥 free<br />
+                🔥 strong<br />
+                🔥 capable<br />
+                🔥 amazing
+            </p>
+        </div>
+
+
         <h2>Why this is realistic</h2>
-        <p class="section-intro">Because the unrealistic thing is continuing to burn human life in order to preserve a
-            broken normal.</p>
+        <p class="section-intro">Historically, defenders of the status quo have weaponized the word "realistic" to enforce
+            compliance. But the truly unrealistic thing is continuing to burn human life in order to preserve a broken normal.
+        </p>
 
         <p>Humanity already has the knowledge, infrastructure, labor power, technology, productive capacity, and land
             to guarantee the basics far more widely than it does now. We already know how to build homes, grow food,
@@ -305,30 +516,44 @@
         <p>That is why “amazing” is not fantasy language. It is the only coherent destination. A civilization that can
             prevent homelessness but does not, reduce overwork but does not, protect children but does not, and
             organize beauty and abundance but does not, is not realistic. It is unfinished.</p>
-        
+
         <p>Many people have lived so long inside fear, blame, shame, grief, and survival logic that a truly better world can sound
             unrealistic at first. That is not proof that amazing is naive. It is proof that Civilization 1.0 trained us to expect
-            too little from life and too little from each other. We do not move forward by finding new people to hate. We move
-            forward by telling the truth, repairing what we can, and building a world that no longer depends on passing pain
-            downstream.</p>
+            too little from life and too little from each other. We have been conditioned to accept profound systemic failure as normal baggage, using numbness just to survive it. We do not move forward by finding new people to hate. We move
+            forward by telling the truth, repairing what we can, grieving what we cannot repair, and building a world that no longer depends on passing pain downstream.</p>
 
-        <h2>How amazing begins</h2>
+
+        <h2 class="begin-section">How amazing begins</h2>
         <p class="section-intro">It begins when we stop treating “less bad” as enough.</p>
-
-        <p>This site exists as an onramp to the whole thing — the plan, the public conversation, and the growing number of people
-            who recognize that life is what we make it, and that “amazing” is not excessive. It is overdue.</p>
-
-        <p><a href="https://worldamazing.org/" target="_blank"><b>World Amazing</b></a> is the broader plan and framework: a realistic map for how humanity can move out of Civilization 1.0 and into a better civilizational baseline.</p>
-
-        <p><a href="https://worldamazing.org/show" target="_blank"><b>The World Amazing Show</b></a> is one live public entry point into that process: discussion, thinking, movement, singing, gathering, and direct participation in imagining and building what comes next.</p>
-
-        <p><a href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank"><b>Hear about upcoming shows.</b></a> Sign up to hear
-            about World Amazing Shows near you, including public gatherings, walking discussions, movement-based events, and
-            other live formats.</p>
-
-        <p><b>Start a show.</b> If you have a group, venue, community, or local network that wants to host a World Amazing
-            gathering, email <a href="mailto:hello@worldamazing.org">hello@worldamazing.org</a>.</p>
-
+        
+        <div class="begin-panel">
+            <p class="begin-kicker">This begins in public</p>
+        
+            <p class="begin-line">
+                Through real conversation, real gatherings, and real people deciding that humanity can do
+                better than merely surviving inside distortion.
+            </p>
+        
+            <p>
+                <a href="https://worldamazing.org/" target="_blank"><b>World Amazing</b></a> is the broader framework and plan.
+                <a href="https://worldamazing.org/show" target="_blank"><b>The World Amazing Show</b></a> is one live way to
+                step into it.
+            </p>
+        
+            <div class="cta-row cta-row-large">
+                <a href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank" class="button primary large">
+                    Hear About Upcoming Shows
+                </a>
+                <a href="https://worldamazing.org/" target="_blank" class="button secondary large">
+                    See the Plan
+                </a>
+            </div>
+        
+            <p class="begin-note">
+                Want to host or invite a gathering? <a href="mailto:hello@worldamazing.org">hello@worldamazing.org</a>
+            </p>
+        </div>
+        
         
         <h2>Likely Asked Questions</h2>
         <div class="faq">
@@ -392,42 +617,22 @@
 
         </div>
 
-        <div class="cta-section">
-            <h2>Ready to help <i>Make It Amazing</i>?</h2>
 
-            <div class="cta-row">
-                <a href="https://worldamazing.org/" target="_blank" class="button secondary">
-                    See the Plan
-                </a>
-                <a href="https://worldamazing.org/show/" target="_blank" class="button primary">
-                    Learn About the Show
-                </a>
-            </div>
-
-            <p class="cta-tagline">
-                The plan explains the larger civilizational shift. The show is one live way to step into it.
-            </p>
-            
-            <p class="cta-tagline">
-                If this feels clear, pass it on. Share this page with others.
-            </p>
-            
-            <p class="cta-tagline">
-                Want to go deeper? The full plan and related documents are available on
-                <a href="https://github.com/worldamazing/plan" target="_blank">GitHub</a>.
-            </p>
-
+        <footer>
             <p class="closing-line">
                 <strong>The only lasting way to fix anything is to make life amazing for all humans, worldwide.</strong>
             </p>
-        </div>
-
-        <footer>
-            <p>
-                Part of the <a href="https://worldamazing.org/" target="_blank">World Amazing</a> ecosystem.
+        
+            <p class="footer-label">Part of the <a href="https://worldamazing.org/" target="_blank">World Amazing</a> ecosystem</p>
+        
+            <p class="footer-nav">
+                <a href="https://worldamazing.org/" target="_blank">World Amazing</a>
+                <a href="https://worldamazing.org/show/" target="_blank">World Amazing Show</a>
+                <a href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank">Sign Up</a>
+                <a href="https://github.com/worldamazing/plan" target="_blank">GitHub</a>
+                <a href="mailto:hello@worldamazing.org">Contact</a>
             </p>
         </footer>
-        
     </main>
 </body>
 
