@@ -357,11 +357,51 @@
             text-decoration: underline;
         }
         /* end footer */
+
+        /* start topbar */
+        .topbar {
+            margin-bottom: 1.6rem;
+            text-align: center;
+            margin-top: -2rem;
+        }
+
+        .topnav {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 0.9rem;
+            padding: 0.55rem 0.9rem;
+            border: 1px solid #21262d;
+            border-radius: 999px;
+            background: #0f141b;
+        }
+
+        .topnav a {
+            color: #8b949e;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        /* end topbar */
     </style>
 </head>
 
 <body>
     <main class="container">
+
+        <div class="topbar">
+            <nav class="topnav" aria-label="Primary">
+                <a href="https://makeitamazing.org/">Make It Amazing</a>
+                <a href="https://worldamazing.org/" target="_blank">World Amazing</a>
+                <a href="https://worldamazing.org/show/" target="_blank">The Show</a>
+                <a href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank">Sign Up</a>
+            </nav>
+        </div>
         <h1 class="title">Make It Amazing</h1>
         <p class="subtitle">From Civilization 1.0 to Civilization 2.0</p>
 
