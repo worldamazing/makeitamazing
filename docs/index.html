@@ -315,6 +315,16 @@
         }
         /* end cta */
 
+        /* begin lists */
+        ul, ol {
+            padding-left: 2.35em;
+            margin: 1.1em 0 1.25em;
+            list-style-position: inside;
+        }
+        
+        li { margin: .26em 0; padding-left: .25em; }
+        /* end lists */
+        
         /* begin footer */
         footer {
             margin-top: 2rem;
@@ -371,9 +381,15 @@
 
         /* start topbar */
         .topbar {
-            margin-bottom: 1.6rem;
-            text-align: center;
+            position: sticky;
+            top: 0.75rem;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+
             margin-top: -2rem;
+            margin-bottom: 1.6rem;
         }
 
         .topnav {
@@ -381,6 +397,10 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.5rem 1.9rem;
+
+            width: fit-content;
+            max-width: calc(100vw - 2rem);
+
             padding: 0.55rem 0.9rem;
             border: 1px solid #21262d;
             border-radius: 999px;
@@ -398,17 +418,23 @@
             color: #ffffff;
             text-decoration: none;
         }
-        /* end topbar */
 
-        /* begin lists */
-        ul, ol {
-            padding-left: 2.35em;
-            margin: 1.1em 0 1.25em;
-            list-style-position: inside;
+        @media (max-width: 600px) {
+            .topbar {
+                top: 0.4rem;
+            }
+
+            .topnav {
+                gap: 0.35rem 1rem;
+                border-radius: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .topnav a {
+                font-size: 0.82rem;
+            }
         }
-        
-        li { margin: .26em 0; padding-left: .25em; }
-        /* end lists */
+        /* end topbar */
     </style>
 </head>
 
@@ -444,18 +470,24 @@
         <p>The result is not proof that people are broken. We are not inherently flawed or doomed. We are running on a legacy operating   
             system built on scarcity logic, and human life is overheating inside it. Civilization 1.0 was built without
             understanding what chronic fear, hidden harm, domination, and disposability do to bodies, bonds, minds, and public
-            life. You can feel the side effects everywhere: inflammation of humanity. Nervous systems running hot. Lives built
+            life.</p>
+            
+        <p>You can feel the side effects everywhere in the inflammation of humanity itself. Nervous systems running hot. Lives built
             around quiet fear, status, distrust, isolation, performance, and avoidance.</p>
 
         <p>We manage symptoms one person at a time and almost never name the larger pattern: <b>the way we live
-                together is inflaming all of us.</b></p>
+            together is inflaming all of us.</b></p>
+
+        <p>Civilization 1.0 persists not because humanity chose suffering as its goal, but because the systems built inside it
+            reward short-term survival, competition, accumulation, and protection of existing positions. A civilization can continue
+            operating long after it stops serving the beings inside it.</p>
 
         <p><b>Civilization 2.0</b> starts from a simpler truth: no one made themselves, we are all built of the same
             stuff, and we all require the same core conditions to flourish — safety, honesty, respect, repair, food,
-            shelter, care, learning, beauty, and real belonging. There is no real “them.” Every war is <b>us and
-                us</b>. Every neglected child is <b>us and us</b>. Every person thrown away for being poor, ill,
-            traumatized, late, or inconvenient is <b>us and us</b>. When a system throws away its own people, it is not
-            preserving order; it is actively engaged in civilizational self-harm.</p>
+            shelter, care, learning, beauty, and real belonging.</p>
+            
+        <p>There is no real “them.” Every war is <b>us and us</b>. Every neglected child is <b>us and us</b>. Every person thrown away for 
+            being poor, ill, traumatized, late, or inconvenient is <b>us and us</b>. When a system throws away its own people, it is not preserving order; it is actively engaged in civilizational self-harm.</p>
 
         <p>We are not going to escape our issues by changing slogans, reshuffling power, fleeing into fantasy, moving to
             another planet, or waiting for an afterlife to fix what we refuse to face here. Wherever we go, it will be
@@ -478,13 +510,13 @@
             human experience; where truth matters; where repair is expected; and where no one is discarded.</p>
 
         <p>“Amazing” does not mean luxury for a few. It means that the baseline of civilization becomes
-            worthy of human beings.</p>
+            worthy of human beings. If humans can imagine and build beauty, cooperation, music, science, care, exploration, and joy, then a civilization designed only around preventing collapse is below human capacity.</p>
 
         <p>“Peace” is not enough if people are still lonely, overworked, chronically stressed, isolated, numbed,
             ashamed, manipulated, medically abandoned, economically trapped, or forced to live in ugly and
             degrading conditions. A civilization is not finished when conflict is merely reduced. It is finished when
             life becomes beautiful, cooperative, healing, and generative as a normal condition.</p>
-
+        
 
         <h2>Civilization 2.0</h2>
         <p class="section-intro"><strong>The following three lists are not disconnected wishes.</strong> They follow from changing the baseline conditions under which human life is organized.</p>
@@ -587,7 +619,15 @@
             unrealistic at first. That is not proof that amazing is naive. It is proof that Civilization 1.0 trained us to expect
             too little from life and too little from each other. We have been conditioned to accept profound systemic failure as normal, using numbness just to survive it. We do not move forward by finding new people to hate. We move
             forward by telling the truth, repairing what we can, grieving what we cannot repair, and building a world that no longer depends on passing pain downstream.</p>
-        
+
+        <p>A deeper objection is that many people believe humans themselves are the problem — that selfishness, cruelty,
+            corruption, and violence are permanent features of our nature. But human behavior does not emerge in isolation. People
+            are shaped by the conditions they inherit, the incentives surrounding them, the relationships they experience, and the
+            examples they are given. A civilization organized around fear and scarcity will repeatedly produce fearful and
+            competitive behavior. A civilization organized around safety, belonging, truth, repair, and shared flourishing can bring
+            out different capacities that are also deeply human.</p>
+
+            
         <h2>Likely Asked Questions</h2>
         <div class="faq">
             <div class="faq-item">
@@ -649,6 +689,25 @@
             </div>
 
         </div>
+
+
+        
+        <h2>The First Step: Seeing Clearly</h2>
+        <p class="section-intro">A civilization does not transform simply because better ideas exist. It transforms when enough people can  
+            clearly see the gap between what is normal and what is possible.
+        </p>
+        
+        <p>The first step is not construction. It is awareness.</p>
+        
+        <p>We begin by examining the assumptions we inherited: what we believe humans are, what we believe people deserve, what we
+            believe work is for, what we believe scarcity means, and what we believe is possible.</p>
+        
+        <p>Civilization 2.0 begins with people willing to look honestly at Civilization 1.0 and ask a simple question:</p>
+        
+        <p><strong>Is the world we inherited the best humanity can do?</strong></p>
+        
+        <p>From that clarity, conversation becomes possible. From conversation, action emerges.</p>
+
 
 
         <h2 class="begin-section">How amazing begins</h2>
