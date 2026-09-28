@@ -349,8 +349,6 @@
 
         /* begin footer */
         footer {
-            margin-top: 2rem;
-            padding-bottom: 0.75rem;
             text-align: center;
             opacity: 0.9;
         }
@@ -654,7 +652,7 @@
 
         .reality-strip {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
             margin: 2.2rem 0 2.6rem;
         }
@@ -1191,6 +1189,154 @@
 
         }
     </style>
+
+    <style>
+        /* =========================================================
+           SEEING CLEARLY — INTERNAL FLOW
+           ========================================================= */
+    
+        #seeing-clearly .seeing-principle {
+            margin: 2.5rem 0 2.3rem;
+            padding: .35rem 0 .35rem 1.15rem;
+            border-left: 3px solid #58a6ff;
+    
+            color: #d7dee7;
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.55;
+        }
+    
+        #seeing-clearly .seeing-question {
+            margin: 2.8rem 0 2.7rem;
+            padding: clamp(1.6rem, 4vw, 2.4rem);
+    
+            border: 1px solid rgba(88, 166, 255, .3);
+            border-radius: 16px;
+    
+            background:
+                linear-gradient(180deg,
+                    rgba(88, 166, 255, .045),
+                    rgba(88, 166, 255, .018));
+    
+            text-align: center;
+        }
+    
+        #seeing-clearly .seeing-question strong {
+            display: block;
+            max-width: 820px;
+            margin: 0 auto;
+    
+            color: #ffffff;
+            font-size: clamp(1.4rem, 3.2vw, 2rem);
+            line-height: 1.35;
+            letter-spacing: -.02em;
+        }
+    
+        #seeing-clearly .seeing-sequence {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            gap: .55rem .8rem;
+    
+            margin: 2.6rem 0 0;
+    
+            color: #8b949e;
+    
+            font-size: .74rem;
+            font-weight: 800;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+    
+        #seeing-clearly .seeing-sequence strong {
+            color: #d7dee7;
+        }
+    
+        #seeing-clearly .seeing-sequence span[aria-hidden="true"] {
+            color: #58a6ff;
+        }
+    
+        @media (max-width: 600px) {
+            #seeing-clearly .seeing-sequence {
+                gap: .4rem .55rem;
+                font-size: .68rem;
+            }
+        }
+    </style>
+
+    <style>
+        /* =========================================================
+           QUESTIONS — COLLAPSED FAQ
+           ========================================================= */
+    
+        #questions .faq {
+            margin-top: 2.3rem;
+            border-top: 1px solid rgba(255, 255, 255, .09);
+        }
+    
+        #questions .faq-item {
+            margin: 0;
+            padding: 0;
+    
+            border-bottom: 1px solid rgba(255, 255, 255, .09);
+        }
+    
+        #questions .faq-item summary {
+            position: relative;
+    
+            padding: 1.25rem 2.5rem 1.25rem 0;
+    
+            color: #d7dee7;
+            cursor: pointer;
+    
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.45;
+    
+            list-style: none;
+        }
+    
+        #questions .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+    
+        #questions .faq-item summary::after {
+            content: "+";
+    
+            position: absolute;
+            top: 50%;
+            right: .15rem;
+    
+            transform: translateY(-50%);
+    
+            color: #58a6ff;
+    
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+    
+        #questions .faq-item[open] summary::after {
+            content: "−";
+        }
+    
+        #questions .faq-item summary:hover {
+            color: #ffffff;
+        }
+    
+        #questions .faq-answer {
+            padding: 0 2.5rem 1.35rem 0;
+        }
+    
+        #questions .faq-answer p {
+            margin: 0;
+    
+            color: #b1bac4;
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
@@ -1199,16 +1345,18 @@
             <h1 class="title">Make It Amazing</h1>
             <p class="subtitle">Upgrading Civilization From: v1.0 to 2.0</p>
             <blockquote class="hero-manifesto">
-                TL;DR — Peace is not enough. We need Amazing.
+                TL;DR — Peace is not enough. We need <em>amazing</em>.
+
+                <br /><br />
+                Humanity needs a civilization that is actually worth living inside.
 
                 <br /><br />
                 We can upgrade our current civilization to build Civilization v2.0: a world where everyone has a
                 home, work is light, health and learning are guaranteed, life is adored, and no one is disposable.
-
-                <br /><br />
-                Humanity needs a civilization that is actually worth living inside.
             </blockquote>
         </section>
+
+
         <nav class="mia-path" aria-label="Make It Amazing navigation">
 
             <div class="mia-path__reading">
@@ -1245,51 +1393,149 @@
 
 
         <section class="mia-section mia-section--civilization-1" id="civilization-1">
-
+        
             <p class="movement-label">
                 01 · The inherited world
             </p>
-
+        
             <h2>Civilization 1.0</h2>
-
+        
             <p class="section-intro">
                 The world we inherited.
             </p>
-
+        
+        
             <p>
-                Civilization 1.0 emerged gradually over thousands of years. Even before agriculture began some 10,000
-                years ago, some human groups were staying in one place longer, building more durable homes, preserving
-                and storing food, accumulating more material resources, and becoming more attached to particular places
-                and territory.
+                Human civilization has changed almost beyond recognition.
             </p>
-
+        
             <p>
-                Agriculture became a major accelerant. Once humans could repeatedly grow food from fixed land, permanent
-                settlement could expand and stabilize at a new scale. Land, stored food, surplus, property, inheritance,
-                labor, and access to necessities became increasingly controllable. Over time, those material changes
-                helped make possible more durable hierarchy, concentrated authority, punishment, bounded belonging, and
-                systems that increasingly divided humans into “us” and “them.”
+                We have built modern medicine, sanitation, science, transportation, instant communication,
+                extraordinary productive capacity, vast stores of knowledge, rights frameworks, cities, art,
+                music, machines, computers, and ways of living that would have been unimaginable to most
+                humans who came before us.
             </p>
-
+        
             <p>
-                None of this means settlement, agriculture, surplus, or technology were themselves the problem. The
-                rupture was in how human life increasingly became organized around control, hierarchy, conditional
-                access, fear, punishment, and concentrated power — and then reproduced those conditions across
-                generations.
+                For enormous numbers of people, life has become safer, longer, freer, more comfortable,
+                and more capable.
             </p>
-
+        
             <p>
-                The result is not proof that people are broken. We are not inherently flawed or doomed. We are living
-                inside a legacy operating system shaped by conditions humans did not yet understand, and human life is
-                overheating inside it. Civilization 1.0 developed without understanding what chronic fear, hidden harm,
-                domination, disposability, and conditional belonging do to bodies, bonds, minds, and public life.
+                But we kept upgrading life inside the civilization we inherited without fully replacing
+                the civilization itself.
             </p>
-
+        
+            <p>
+                Basic existence is still conditional. Home, food, healthcare, transportation, education,
+                safety, participation, and control over our own time still depend heavily on continually
+                securing access to them. Much of human life is still organized around survival pressure,
+                economic pressure, authority, status, debt, schedules, and exchanging finite human time
+                for continued access to life.
+            </p>
+        
+            <p>
+                We have loosened many of the old chains.
+                <br /><br />
+                <strong>But we are still living in time chains.</strong>
+            </p>
+        
+            <p>
+                Some are born into safety and inconvenience.
+                <br /><br />
+                Some are born into deprivation and violence.
+                <br /><br />
+                Some spend their lives trying to reach the level of existence that others are already
+                trying to escape.
+            </p>
+        
+            <p>
+                <strong>This is what is meant by Civilization 1.0.</strong>
+            </p>
+        
+            <p>
+                Not the ancient world frozen in time. The long civilizational lineage humanity inherited
+                from it — continuously modified, corrected, expanded, humanized, and technologically
+                transformed, while some of its deepest organizing relationships to survival, access,
+                labor, hierarchy, authority, punishment, property, and human time remained.
+            </p>
+        
+            <p>
+                <strong>
+                    We kept upgrading Civilization 1.0 without completing the upgrade of civilization itself.
+                </strong>
+            </p>
+        
+            <p>
+                So how did we get here?
+            </p>
+        
+            <p>
+                Civilization 1.0 emerged gradually over thousands of years. Even before agriculture began
+                some 10,000 years ago, some human groups were staying in one place longer, building more
+                durable homes, preserving and storing food, accumulating more material resources, and
+                becoming more attached to particular places and territory.
+            </p>
+        
+            <p>
+                Agriculture became a major accelerant. Once humans could repeatedly grow food from fixed land,
+                permanent settlement could expand and stabilize at a new scale. Land, stored food, surplus,
+                property, inheritance, labor, and access to necessities became increasingly controllable.
+                Over time, those material changes helped make possible more durable hierarchy, concentrated
+                authority, punishment, bounded belonging, and systems that increasingly divided humans into
+                “us” and “them.”
+            </p>
+        
+            <p>
+                None of this means settlement, agriculture, surplus, or technology were themselves the problem.
+                The rupture was in how human life increasingly became organized around control, hierarchy,
+                conditional access, fear, punishment, and concentrated power — and then reproduced those
+                conditions across generations.
+            </p>
+        
+            <p>
+                And those conditions did not only organize the world around humans.
+            </p>
+        
+            <p>
+                <strong>They began organizing humans.</strong>
+            </p>
+        
+            <p>
+                Every child arrives inside conditions they did not choose. They adapt to the relationships,
+                fears, expectations, authorities, rewards, punishments, shortages, silences, loyalties,
+                and survival pressures surrounding them.
+            </p>
+        
+            <p>
+                Those children become adults. Adults build families, institutions, economies, governments,
+                cultures, and the conditions encountered by the next child.
+            </p>
+        
+            <p>
+                <strong>The world develops the human.</strong>
+                <br /><br />
+                <strong>The human rebuilds the world.</strong>
+            </p>
+        
+            <p>
+                And the loop continues.
+            </p>
+        
+            <p>
+                The result is not proof that people are broken. We are not inherently flawed or doomed.
+                We are living inside a legacy operating system shaped by conditions humans did not yet
+                understand, and human life is overheating inside it. Civilization 1.0 developed without
+                understanding what chronic fear, hidden harm, domination, disposability, and conditional
+                belonging do to bodies, bonds, minds, and public life.
+            </p>
+        
+        
             <div class="civilization-symptoms">
                 <span class="civilization-symptoms__label">
                     You can feel the side effects
                 </span>
-
+        
                 <div class="civilization-symptoms__list">
                     <span>Nervous systems running hot.</span>
                     <span>Quiet fear.</span>
@@ -1300,69 +1546,70 @@
                     <span>Avoidance.</span>
                 </div>
             </div>
-
-
+        
+        
             <div class="mia-statement mia-statement--diagnosis mia-statement--large">
                 <span class="mia-statement__label">
                     The larger pattern
                 </span>
-
+        
                 <strong>
                     The way we live together is inflaming all of us.
                 </strong>
             </div>
-
-
+        
+        
             <p>
                 We manage symptoms one person at a time and almost never name the larger pattern.
             </p>
-
+        
             <p>
-                Civilization 1.0 persists not because humanity chose suffering as its goal, but because the systems
-                built inside it reward short-term survival, competition, accumulation, and protection of existing
-                positions. A civilization can continue operating long after it stops serving the beings inside it.
+                Civilization 1.0 persists not because humanity chose suffering as its goal, but because
+                the systems built inside it reward short-term survival, competition, accumulation, and
+                protection of existing positions. A civilization can continue operating long after it
+                stops serving the beings inside it.
             </p>
-
-
+        
+        
             <p>
-                <b>Civilization 2.0</b> starts from a simpler truth: no one made themselves, we are all built of the
-                same stuff, and we all require the same core conditions to flourish — safety, honesty, respect, repair,
-                food, shelter, care, learning, beauty, and real belonging.
+                <b>Civilization 2.0</b> starts from a simpler truth: no one made themselves, we are all
+                built of the same stuff, and we all require the same core conditions to flourish —
+                safety, honesty, respect, repair, food, shelter, care, learning, beauty, and real belonging.
             </p>
-
-
+        
+        
             <div class="us-and-us">
-
+        
                 <p class="us-and-us__heading">
                     There is no real “them.”
                 </p>
-
+        
                 <div class="us-and-us__rows">
-
+        
                     <div class="us-and-us__row">
                         <span>Every war</span>
                         <strong>us and us</strong>
                     </div>
-
+        
                     <div class="us-and-us__row">
                         <span>Every neglected child</span>
                         <strong>us and us</strong>
                     </div>
-
+        
                     <div class="us-and-us__row">
                         <span>Every person thrown away</span>
                         <strong>us and us</strong>
                     </div>
-
+        
                 </div>
-
+        
                 <p class="us-and-us__closing">
-                    When a system throws away its own people, it is not preserving order; it is actively engaged in
-                    <strong>civilizational self-harm.</strong>
+                    When a system throws away its own people, it is not preserving order; it is actively
+                    engaged in <strong>civilizational self-harm.</strong>
                 </p>
             </div>
-
-
+        
+        
             <p>
                 We are not going to escape our issues by changing slogans,
                 reshuffling power, fleeing into fantasy, moving to another
@@ -1372,21 +1619,21 @@
                 and the same consequences — unless we change how we live
                 with each other.
             </p>
-
-
+        
+        
             <div class="civilization-responsibility">
-
+        
                 <p>
                     No one chose to be born inside Civilization 1.0.
                 </p>
-
+        
                 <strong>
                     But we are responsible for what we do now.
                 </strong>
-
+        
             </div>
-
-
+        
+        
             <p>
                 The shift to Civilization 2.0 will not come from pretending
                 everything is fine. It will require truth, repair, and the
@@ -1394,8 +1641,9 @@
                 people. It will require building systems that protect life
                 instead of grinding it down.
             </p>
-
+        
         </section>
+
 
         <div aria-label="Transition" class="mia-turn">
             <span>The turn</span>
@@ -1403,51 +1651,74 @@
             <strong>Civilization does not have to keep reproducing what we inherited.</strong>
         </div>
 
+        
         <section class="mia-section" id="amazing">
-            <p class="movement-label">02 · The standard</p>
+        
+            <p class="movement-label">
+                02 · The standard
+            </p>
+        
             <h2>What does “Amazing” mean?</h2>
-            <p class="section-intro">It means building a civilization that does more than merely survive.</p>
-            <p>To <i>Make It Amazing</i> is to deliberately build a world where everyone has a real home; where health
-                and
-                learning are shared infrastructure; where children are safe; where work is lighter, meaningful, and no
-                longer consumes life; where food, beauty, movement, music, nature, and public life are part of the
-                normal
-                human experience; where truth matters; where repair is expected; and where no one is discarded.</p>
-            <p>“Amazing” does not mean luxury for a few. It means that the baseline of civilization becomes
-                worthy of human beings. If humans can imagine and build beauty, cooperation, music, science, care,
-                exploration, and joy, then a civilization designed only around preventing collapse is below human
-                capacity.</p>
-
+        
+            <p class="section-intro">
+                It means building a civilization that does more than merely survive.
+            </p>
+        
+            <p>
+                To <i>Make It Amazing</i> is to deliberately build a world where everyone has a real home;
+                where health and learning are shared infrastructure; where children are safe; where work is
+                lighter, meaningful, and no longer consumes life; where food, beauty, movement, music, nature,
+                and public life are part of the normal human experience; where truth matters; where repair is
+                expected; and where no one is discarded.
+            </p>
+        
+            <p>
+                “Amazing” does not mean luxury for a few. It means that the baseline of civilization becomes
+                worthy of human beings. If humans can imagine and build beauty, cooperation, music, science,
+                care, exploration, and joy, then a civilization designed only around preventing collapse is
+                below human capacity.
+            </p>
+        
+        
             <div class="mia-statement mia-statement--standard mia-statement--standard-copy">
+        
                 <span class="mia-statement__label">
                     Peace is not the ceiling
                 </span>
-
+        
                 <p>
-                    “Peace” is not enough if people are still lonely, overworked, chronically stressed, isolated,
-                    numbed,
-                    ashamed, manipulated, medically abandoned, economically trapped, or forced to live in ugly and
-                    degrading conditions.
+                    “Peace” is not enough if people are still lonely, overworked, chronically stressed,
+                    isolated, numbed, ashamed, manipulated, medically abandoned, economically trapped,
+                    or forced to live in ugly and degrading conditions.
                 </p>
-
+        
+                <p>
+                    <strong>Relief is the floor. Amazing is the ceiling.</strong>
+                </p>
+        
                 <p>
                     A civilization is not finished when conflict is merely reduced.
                     <strong>
-                        It is finished when life becomes beautiful, cooperative, healing, and generative as a normal
-                        condition.
+                        It is finished when life becomes beautiful, cooperative, healing, and generative
+                        as a normal condition.
                     </strong>
                 </p>
+        
             </div>
-
+        
         </section>
+
+
         <section class="mia-section" id="civilization-2">
             <p class="movement-label">03 · The world we build</p>
             <h2>Civilization 2.0</h2>
-            <p class="section-intro"><strong>The following three lists are not disconnected wishes.</strong> They follow
-                from changing the baseline conditions under which human life is organized.</p>
+            <p class="section-intro">
+                <strong>The following three lists are not disconnected wishes.</strong>
+                They describe what becomes possible when the baseline conditions of human life change.
+            </p>
             <div class="vision-sequence">
                 <div class="vision-block vision-yes">
-                    <p class="vision-kicker">What life can contain</p>
+                    <p class="vision-kicker">What becomes normal</p>
                     <h3><i>Amazing is a world where everyone</i></h3>
                     <p class="vision-list">
                         ✅ grows and excels<br>
@@ -1510,7 +1781,7 @@
                     </p>
                 </div>
                 <div class="vision-block vision-human">
-                    <p class="vision-kicker">What every human remains</p>
+                    <p class="vision-kicker">The human baseline</p>
                     <h3><i>Amazing is a world where everyone is</i></h3>
                     <p class="vision-list">
                         🔥 essential<br />
@@ -1527,39 +1798,91 @@
 
 
         </section>
-        <section class="mia-section" id="realistic">
-            <p class="movement-label">04 · Can we actually do this?</p>
-            <h2>Why this is realistic</h2>
-            <p class="section-intro">Historically, defenders of the status quo have weaponized the word "realistic" to
-                enforce
-                compliance. But the truly unrealistic thing is continuing to burn human life in order to preserve a
-                broken normal.
-            </p>
-            <div aria-label="Why this is realistic at a glance" class="reality-strip">
-                <article><strong>Capacity exists</strong>
-                    <p>Humanity already has extraordinary knowledge, infrastructure, technology, labor, land, and
-                        productive capacity.</p>
-                </article>
-                <article><strong>Pieces already work</strong>
-                    <p>Housing, healthcare, education, infrastructure, public systems, and cooperative models already
-                        demonstrate parts of the possibility.</p>
-                </article>
-                <article><strong>Humans respond to conditions</strong>
-                    <p>Behavior changes when the surrounding conditions, incentives, safety, development, and
-                        expectations change.</p>
-                </article>
-            </div>
-            <p>Humanity already has the knowledge, infrastructure, labor power, technology, productive capacity, and
-                land to guarantee the basics far more widely than it does now. We already know how to build homes, grow
-                food, educate children, provide healthcare, organize transportation, and coordinate at scale. The
-                problem is not that a better world is impossible. The problem is that our current systems are still
-                organized around old assumptions: scarcity logic, hierarchy, competition, image maintenance, and the
-                idea that some people are allowed to be sacrificed so that others can feel secure.</p>
 
-            <p>That is why “amazing” is not fantasy language. It is the only coherent destination.</p>
+
+        <section class="mia-section" id="realistic">
+
+            <p class="movement-label">
+                04 · Can we actually do this?
+            </p>
+
+            <h2>Why this is realistic</h2>
+
+            <p class="section-intro">
+                Historically, defenders of the status quo have weaponized the word "realistic"
+                to enforce compliance. But the truly unrealistic thing is continuing to burn
+                human life in order to preserve a broken normal.
+            </p>
+
+
+            <div aria-label="Why this is realistic at a glance" class="reality-strip">
+
+                <article>
+                    <strong>Capacity exists</strong>
+                    <p>
+                        Humanity already has extraordinary knowledge, infrastructure,
+                        technology, labor, land, and productive capacity.
+                    </p>
+                </article>
+
+                <article>
+                    <strong>Pieces already work</strong>
+                    <p>
+                        Housing, healthcare, education, infrastructure, public systems,
+                        and cooperative models already demonstrate parts of the possibility.
+                    </p>
+                </article>
+
+                <article>
+                    <strong>Humans respond to conditions</strong>
+                    <p>
+                        Behavior changes when the surrounding conditions, incentives,
+                        safety, development, and expectations change.
+                    </p>
+                </article>
+
+                <article>
+                    <strong>Transition can be gradual</strong>
+                    <p>
+                        Civilization does not need to stop while we rebuild it.
+                        Better systems can be built beside existing ones and take over
+                        functions as they become ready.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <p>
+                Humanity already has the knowledge, infrastructure, labor power, technology,
+                productive capacity, and land to guarantee the basics far more widely than
+                it does now. We already know how to build homes, grow food, educate children,
+                provide healthcare, organize transportation, and coordinate at scale.
+                The problem is not that a better world is impossible. The problem is that
+                our current systems are still organized around old assumptions: scarcity
+                logic, hierarchy, competition, image maintenance, and the idea that some
+                people are allowed to be sacrificed so that others can feel secure.
+            </p>
+
+            <p>
+                And none of this requires humanity to switch the existing world off and
+                start over. Existing systems can keep functioning while useful capacity
+                is connected, better structures are built beside them, and functions
+                progressively move into systems that serve human life better. Civilization
+                2.0 does not have to arrive in one global moment. It can become the new
+                normal by making more and more of Civilization 1.0 unnecessary.
+            </p>
+
+            <p>
+                That is why “amazing” is not fantasy language. It is the only coherent destination.
+            </p>
+
 
             <div class="mia-statement mia-statement--unfinished mia-statement--large">
-                <span class="mia-statement__label">What is actually unrealistic?</span>
+
+                <span class="mia-statement__label">
+                    What is actually unrealistic?
+                </span>
 
                 <strong>
                     A civilization that can prevent homelessness but does not,
@@ -1567,132 +1890,242 @@
                     and organize beauty and abundance but does not, is not realistic.
                     It is unfinished.
                 </strong>
+
             </div>
 
-            <p>Many people have lived so long inside fear, blame, shame, grief, and survival logic that a truly better
-                world can sound unrealistic at first. That is not proof that amazing is naive. It is proof that
-                Civilization 1.0 trained us to expect too little from life and too little from each other. We have been
-                conditioned to accept profound systemic failure as normal, using numbness just to survive it. We do not
-                move forward by finding new people to hate. We move forward by telling the truth, repairing what we can,
-                grieving what we cannot repair, and building a world that no longer depends on passing pain downstream.
+
+            <p>
+                Many people have lived so long inside fear, blame, shame, grief, and survival
+                logic that a truly better world can sound unrealistic at first. That is not
+                proof that amazing is naive. It is proof that Civilization 1.0 trained us to
+                expect too little from life and too little from each other. We have been
+                conditioned to accept profound systemic failure as normal, using numbness
+                just to survive it. We do not move forward by finding new people to hate.
+                We move forward by telling the truth, repairing what we can, grieving what
+                we cannot repair, and building a world that no longer depends on passing
+                pain downstream.
             </p>
-            <p>A deeper objection is that many people believe humans themselves are the problem — that selfishness,
-                cruelty, corruption, and violence are permanent features of our nature. But human behavior does not
-                emerge in isolation. People are shaped by the conditions they inherit, the incentives surrounding them,
-                the relationships they experience, and the examples they are given. A civilization organized around fear
-                and scarcity will repeatedly produce fearful and competitive behavior. A civilization organized around
-                safety, belonging, truth, repair, and shared flourishing can bring out different capacities that are
-                also deeply human.</p>
+
+            <p>
+                And humans themselves are not an argument against the possibility. As we
+                have already seen, people develop inside conditions. Change the conditions,
+                incentives, relationships, expectations, and possibilities surrounding
+                human life, and human behavior changes with them. We do not need different
+                humans before we can build a different civilization.
+                <strong>Different conditions help develop different humans.</strong>
+            </p>
+
         </section>
-        <section class="mia-section" id="questions">
-            <p class="movement-label">05 · Questions</p>
-            <h2>Likely Asked Questions</h2>
-            <div class="faq faq--refreshed">
-                <div class="faq-item">
-                    <h3>Who is this for?</h3>
-                    <p>Everyone. This is not for a niche, a class, a nation, or a subculture. It is an invitation to
-                        humanity.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is this politics?</h3>
-                    <p>Not in the narrow party sense. This concerns how humans live together at civilizational scale:
-                        housing, work, care, truth, public life, childhood, repair, and the design of everyday
-                        existence.
-                        It is broader than conventional politics because it reaches beneath policy into the operating
-                        system
-                        itself.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is this realistic, or just utopian?</h3>
-                    <p>It is realistic precisely because the current arrangement is failing at enormous human cost while
-                        still possessing the means to do far better. The fantasy is believing that endless stress, rent
-                        extraction, loneliness, disposability, degraded public life, and preventable suffering are
-                        somehow
-                        the natural endpoint of human civilization.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Why use the word “amazing”?</h3>
-                    <p>Because “less bad” is not a final standard. Humanity should not aim for a barely tolerable
-                        civilization. It should aim for a world that is beautiful, sane, cooperative, healing, and worth
-                        being born into. “Amazing” names the fact that the proper baseline for civilization should feel
-                        worthy of life, not merely survivable.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What changes first?</h3>
-                    <p>First comes clarity: naming what is broken and what is possible. Then come public conversation,
-                        live
-                        gatherings, visible prototypes, and practical steps that begin reorganizing life around homes,
-                        care,
-                        truth, cooperation, and human flourishing. Civilization 2.0 is not built in one gesture. It is
-                        built by making the next normal visible and real.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need to agree with everything to participate?</h3>
-                    <p>No. The invitation is not to perform ideological loyalty. The invitation is to think seriously,
-                        engage honestly, and help move humanity toward a world that is less distorted, less cruel, less
-                        wasteful, and far more alive.</p>
-                </div>
-            </div>
-        </section>
+
+
         <section class="mia-section" id="seeing-clearly">
-            <p class="movement-label">06 · The first move</p>
-            <h2>The First Step: Seeing Clearly</h2>
-            <p class="section-intro">A civilization does not transform simply because better ideas exist. It transforms
-                when enough people can clearly see the gap between what is normal and what is possible.
+        
+            <p class="movement-label">
+                05 · The first move
             </p>
-
-            <p class="mia-statement mia-statement--awareness">
+        
+            <h2>
+                The First Step: Seeing Clearly
+            </h2>
+        
+            <p class="section-intro">
+                A civilization does not transform simply because better ideas exist.
+                It transforms when enough people can clearly see the gap between
+                what is normal and what is possible.
+            </p>
+        
+        
+            <p class="seeing-principle">
                 The first step is not construction. It is awareness.
             </p>
-
-            <p>We begin by examining the assumptions we inherited: what we believe humans are, what we believe people
-                deserve, what we believe work is for, what we believe scarcity means, and what we believe is possible.
+        
+        
+            <p>
+                We begin by examining the assumptions we inherited: what humans are,
+                what people deserve, what work is for, what scarcity requires,
+                and what we believe is possible.
             </p>
-
-            <p>Civilization 2.0 begins with people willing to look honestly at Civilization 1.0 and ask a simple
-                question:</p>
-
-            <p class="mia-statement mia-statement--question">
-                <strong>Is the world we inherited the best humanity can do?</strong>
+        
+            <p>
+                Civilization 2.0 begins with people willing to look honestly at
+                Civilization 1.0 and ask a simple question:
             </p>
-
-            <p>From that clarity, conversation becomes possible. From conversation, action emerges.</p>
+        
+        
+            <div class="seeing-question">
+                <strong>
+                    Is the world we inherited the best humanity can do?
+                </strong>
+            </div>
+        
+        
+            <div class="seeing-sequence" aria-label="Clarity leads to conversation, which leads to action">
+                <strong>Clarity</strong>
+                <span aria-hidden="true">→</span>
+                <strong>Conversation</strong>
+                <span aria-hidden="true">→</span>
+                <strong>Action</strong>
+            </div>
+        
         </section>
+
+
+        <section class="mia-section" id="questions">
+        
+            <p class="movement-label">
+                06 · Questions
+            </p>
+        
+            <h2>Questions</h2>
+        
+            <p class="section-intro">
+                Some questions naturally follow.
+            </p>
+        
+        
+            <div class="faq">
+        
+                <details class="faq-item">
+                    <summary>
+                        Who is this for?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            Everyone. This is not for a niche, a class, a nation, or a subculture.
+                            It is an invitation to humanity.
+                        </p>
+                    </div>
+                </details>
+        
+        
+                <details class="faq-item">
+                    <summary>
+                        Is this politics?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            Not in the narrow party sense. This concerns how humans live together
+                            at civilizational scale: housing, work, care, truth, public life,
+                            childhood, repair, and the design of everyday existence. It reaches
+                            beneath individual policies into the operating system itself.
+                        </p>
+                    </div>
+                </details>
+        
+        
+                <details class="faq-item">
+                    <summary>
+                        Is this realistic, or just utopian?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            It is realistic precisely because the current arrangement is failing
+                            at enormous human cost while humanity already possesses the capacity
+                            to do far better. The fantasy is believing that endless stress,
+                            disposability, degraded public life, and preventable suffering are
+                            somehow the natural endpoint of human civilization.
+                        </p>
+                    </div>
+                </details>
+        
+        
+                <details class="faq-item">
+                    <summary>
+                        Why use the word “amazing”?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            Because “less bad” is not a final standard. Humanity should not aim
+                            for a barely tolerable civilization. Relief is the floor. Amazing
+                            names the larger goal: a world that is beautiful, cooperative,
+                            healing, generative, and genuinely worth being born into.
+                        </p>
+                    </div>
+                </details>
+        
+        
+                <details class="faq-item">
+                    <summary>
+                        What changes first?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            First comes clarity. We make the gap between what is normal and what
+                            is possible visible. From there come conversation, connection,
+                            prototypes, and practical systems that begin making a better normal real.
+                            Civilization 2.0 is not built in one gesture.
+                        </p>
+                    </div>
+                </details>
+        
+        
+                <details class="faq-item">
+                    <summary>
+                        Do I need to agree with everything to participate?
+                    </summary>
+        
+                    <div class="faq-answer">
+                        <p>
+                            No. The invitation is not to perform ideological loyalty. It is to
+                            think seriously, engage honestly, and help humanity work toward a
+                            civilization that serves human life far better than the one we inherited.
+                        </p>
+                    </div>
+                </details>
+        
+            </div>
+        
+        </section>
+
+
         <section class="mia-section" id="begin">
-            <p class="movement-label">07 · Enter the work</p>
-            <h2 class="begin-section">How amazing begins</h2>
-            <p class="section-intro">It begins when we stop treating “less bad” as enough.</p>
+        
+            <p class="movement-label">
+                07 · Enter the work
+            </p>
+        
+            <h2 class="begin-section">
+                How amazing begins
+            </h2>
+        
+            <p class="section-intro">
+                It begins when we stop treating “less bad” as enough.
+            </p>
+        
+        
             <div class="begin-panel begin-panel--gateway">
-                <p class="begin-kicker">This begins in public</p>
-                <p class="begin-line">
-                    Through real conversation, real gatherings, and real people deciding that humanity can do
-                    better than merely surviving inside incoherence
+        
+                <p class="begin-kicker">
+                    The next step
                 </p>
-                <ul>
-                    <li><a href="https://makeitamazing.org/" target="_blank"><b>Make It Amazing</b></a> <em>(this
-                            site)</em> is the invitation.</li>
-                    <li><a href="https://worldamazing.org/" target="_blank"><b>World Amazing</b></a> is the broader
-                        framework.</li>
-                    <li><a href="https://worldamazing.org/show" target="_blank"><b>The Show</b></a> is one live public
-                        way to step in.</li>
-                    <li><a href="https://github.com/worldamazing/plan" target="_blank"><b>GitHub</b></a> is another
-                        public way to begin.</li>
-                </ul>
+        
+                <p class="begin-line">
+                    <strong>See what humanity can build.</strong>
+                    <br />
+                    <strong>Help make it real.</strong>
+                </p>
+        
                 <div class="cta-row cta-row-large">
-                    <a class="button primary large" href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank"
-                        rel="noopener">
+        
+                    <a class="button primary large" href="https://worldamazing.org/" target="_blank" rel="noopener">
+                        See World Amazing
+                    </a>
+        
+                    <a class="button secondary large" href="https://forms.gle/AdHLCHzLEFkhTdPN8" target="_blank" rel="noopener">
                         Join World Amazing
                     </a>
-                    <a class="button secondary large" href="https://worldamazing.org/" target="_blank" rel="noopener">
-                        See the Plan
-                    </a>
+        
                 </div>
-                <p class="begin-note">
-                    Want to host or invite a gathering? <a
-                        href="mailto:hello@worldamazing.org">hello@worldamazing.org</a>
-                </p>
+        
             </div>
+        
         </section>
+
         <footer class="mia-footer">
             <p class="closing-line">
                 <strong>The only lasting way to fix anything is to make life amazing for all, worldwide.</strong>
